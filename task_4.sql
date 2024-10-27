@@ -1,7 +1,15 @@
--- Use the Database
-USE alx_book_store;
+-- File: task_4.sql
 
--- Full Description of Books Table
-SELECT column_name, data_type, is_nullable, column_default
-FROM information_schema.columns
-WHERE table_name = 'books' AND table_schema = 'alx_book_store';
+-- Use the INFORMATION_SCHEMA to get table information
+SELECT 
+    COLUMN_NAME, 
+    DATA_TYPE, 
+    CHARACTER_MAXIMUM_LENGTH, 
+    NUMERIC_PRECISION, 
+    NUMERIC_SCALE, 
+    IS_NULLABLE 
+FROM 
+    INFORMATION_SCHEMA.COLUMNS 
+WHERE 
+    TABLE_NAME = 'books' 
+    AND TABLE_SCHEMA = 'alx_book_store';
